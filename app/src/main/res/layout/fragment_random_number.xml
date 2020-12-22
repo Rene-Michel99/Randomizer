@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomNumber"
+    android:background="#00022E"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/id_random">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min:"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/ini_inter"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:inputType="number"
+            android:layout_marginRight="150dp">
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max:"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:layout_marginTop="58dp">
+        </TextView>
+
+        <EditText
+            android:layout_marginTop="56dp"
+            android:id="@+id/fim_inter"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="150dp"
+            android:inputType="number">
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantidade:"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:layout_marginTop="58dp">
+        </TextView>
+
+        <EditText
+            android:layout_marginTop="56dp"
+            android:id="@+id/qntd"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="150dp"
+            android:inputType="number">
+        </EditText>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#01006C"
+        android:shadowColor="@color/cardview_light_background"
+        android:text="Resultado"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/generate_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gerar número"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF073A"
+        android:textSize="16dp">
+    </Button>
+
+</LinearLayout>

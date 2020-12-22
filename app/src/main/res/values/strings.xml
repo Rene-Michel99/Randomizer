@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Randomizer</string>
+    <string name="error_qnt">Campos não preenchidos!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tip_num">Gera números aleatórios a partir de um intervalo e a quantidade de números.</string>
+    <string name="error_count_list">As listas tem um tamanho diferente!</string>
+</resources>

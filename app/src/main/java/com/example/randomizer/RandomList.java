@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Random;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RandomList#newInstance} factory method to
@@ -68,12 +70,12 @@ public class RandomList extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.fragment_random_number,container,false);
+        final View view = inflater.inflate(R.layout.fragment_random_list,container,false);
 
-        pair_1 = view.findViewById(R.id.pair_1);
-        pair_2 = view.findViewById(R.id.pair_2);
-        result = view.findViewById(R.id.result_list);
-        btn = view.findViewById(R.id.generate_list);
+        pair_1 = (EditText) view.findViewById(R.id.pair_1);
+        pair_2 = (EditText) view.findViewById(R.id.pair_2);
+        result = (TextView) view.findViewById(R.id.result_list);
+        btn = (Button) view.findViewById(R.id.generate_list);
 
         btn.setOnClickListener(this);
 
@@ -84,23 +86,37 @@ public class RandomList extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         if(v==btn) {
             if(pair_1.getText().toString().length() > 0 && pair_2.getText().toString().length()>0){
-                String[] input1 = pair_1.getText().toString().split(",");
-                String[] input2 = pair_2.getText().toString().split(",");
+                Random rand = new Random();
 
-                if(input1.length == input2.length){
+                FuncList input1 = new FuncList(pair_1.getText().toString().split(","));
+                FuncList input2 = new FuncList(pair_2.getText().toString().split(","));
+
+                if(input1.length() == input2.length()){
                     String out = "";
+                    int min = 0;
 
-                    for(int i=0; i<input1.length; i++)
-                        out = out + input1[i] + ":" + input2[i] + "\n";
+                    while (true){
+
+                        int max1 = input1.length() - 1;
+                        int max2 = input2.length() - 1;
+
+                        int pos1 = rand.nextInt((max1 - min) + 1) + min;
+                        int pos2 = rand.nextInt((max2 - min) + 1) + min;
+
+                        out = out + input1.pop(pos1) + ":" + input2.pop(pos2) + "\n";
+
+                        if(input1.length() == 0)
+                            break;
+                    }
                     result.setText(out);
                 }
                 else{
-                    LinearLayout lay = (LinearLayout) getView().findViewById(R.id.id_random);
+                    LinearLayout lay = (LinearLayout) getView().findViewById(R.id.id_list);
                     Snackbar.make(lay, R.string.error_count_list,Snackbar.LENGTH_SHORT).show();
                 }
             }
             else{
-                LinearLayout lay = (LinearLayout) getView().findViewById(R.id.id_random);
+                LinearLayout lay = (LinearLayout) getView().findViewById(R.id.id_list);
                 Snackbar.make(lay, R.string.error_qnt,Snackbar.LENGTH_SHORT).show();
             }
         }

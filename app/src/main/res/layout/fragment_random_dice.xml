@@ -19,7 +19,7 @@
         android:id="@+id/roll_dice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Roll Dice"
+        android:text="Jogar Dado"
         android:backgroundTint="#FF073A"
         android:textColor="#FFFFFF"
         android:textSize="16dp">

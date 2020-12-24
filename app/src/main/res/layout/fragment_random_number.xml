@@ -109,7 +109,7 @@
         android:id="@+id/generate_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gerar número"
+        android:text="Gerar"
         android:textColor="#FFFFFF"
         android:backgroundTint="#FF073A"
         android:textSize="16dp">

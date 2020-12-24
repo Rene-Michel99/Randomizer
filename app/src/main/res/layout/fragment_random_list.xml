@@ -76,7 +76,7 @@
         android:id="@+id/generate_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Generate"
+        android:text="Gerar"
         android:backgroundTint="#FF073A"
         android:textColor="#FFFFFF"
         android:textSize="16dp">

@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RandomDice">
+    tools:context=".RandomDice"
+    android:background="#00022E"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/dice"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/face1">
+    </ImageView>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/roll_dice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll Dice"
+        android:backgroundTint="#FF073A"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp">
+    </Button>
+
+
+</LinearLayout>
